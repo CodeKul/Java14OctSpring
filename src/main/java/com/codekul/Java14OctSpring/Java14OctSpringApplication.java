@@ -1,5 +1,6 @@
 package com.codekul.Java14OctSpring;
 
+import com.codekul.Java14OctSpring.di.Company;
 import com.codekul.Java14OctSpring.ioc.Jio;
 import com.codekul.Java14OctSpring.ioc.Sim;
 import com.codekul.Java14OctSpring.ioc.SimConfig;
@@ -7,6 +8,7 @@ import com.codekul.Java14OctSpring.ioc.Vodafone;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,7 +18,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class Java14OctSpringApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Java14OctSpringApplication.class, args);
+		ConfigurableApplicationContext applicationContext = SpringApplication.run(Java14OctSpringApplication.class, args);
+		Company company = applicationContext.getBean(Company.class);
+		company.showCompanyEmp();
 
 //		Vodafone vodafone = new Vodafone();
 //		vodafone.calling();
@@ -26,10 +30,10 @@ public class Java14OctSpringApplication {
 //		jio.calling();
 //		jio.data();
 
-		ApplicationContext context = new AnnotationConfigApplicationContext(SimConfig.class);
-		Sim sim = context.getBean(Jio.class);
-		sim.calling();
-		sim.data();
+//		ApplicationContext context = new AnnotationConfigApplicationContext(SimConfig.class);
+//		Sim sim = context.getBean(Jio.class);
+//		sim.calling();
+//		sim.data();
 	}
 
 	@GetMapping("hiiSpring")
