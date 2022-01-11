@@ -15,6 +15,26 @@ public class User {
 
     private String email;
 
+    private Integer contact;
+
+    private String gender;
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public Integer getContact() {
+        return contact;
+    }
+
+    public void setContact(Integer contact) {
+        this.contact = contact;
+    }
+
     public Integer getId() {
         return id;
     }
