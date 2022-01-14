@@ -13,14 +13,20 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.net.InetAddress;
+import java.net.SocketException;
+import java.net.UnknownHostException;
+
 @SpringBootApplication
 @RestController
 public class Java14OctSpringApplication {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SocketException, UnknownHostException {
+		InetAddress addr = InetAddress.getLocalHost();
+
 		ConfigurableApplicationContext applicationContext = SpringApplication.run(Java14OctSpringApplication.class, args);
-		Company company = applicationContext.getBean(Company.class);
-		company.showCompanyEmp();
+//		Company company = applicationContext.getBean(Company.class);
+//		company.showCompanyEmp();
 
 //		Vodafone vodafone = new Vodafone();
 //		vodafone.calling();
