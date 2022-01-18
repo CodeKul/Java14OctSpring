@@ -1,4 +1,6 @@
-package com.codekul.Java14OctSpring.manytomany;
+package com.codekul.Java14OctSpring.manytomany.domain;
+
+import com.codekul.Java14OctSpring.manytomany.domain.Courses;
 
 import javax.persistence.*;
 import java.util.List;
@@ -17,8 +19,8 @@ public class Student {
 
     private String email;
 
-    @ManyToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-    @JoinTable(name = "Stud_courses",joinColumns = {@JoinColumn(name = "student_id",referencedColumnName = "id")},
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "stud_courses",joinColumns = {@JoinColumn(name = "student_id",referencedColumnName = "id")},
     inverseJoinColumns = {@JoinColumn(name = "course_id",referencedColumnName = "id")})
     private List<Courses> courses;
 
@@ -62,3 +64,19 @@ public class Student {
         this.courses = courses;
     }
 }
+
+/**
+ * {
+ *     "name": "Rakesh",
+ *     "contact": 786768,
+ *     "email": "rakesh@gmail.com",
+ *     "courses": [
+ *         {
+ *             "id": 1
+ *         },
+ *         {
+ *             "id": 2
+ *         }
+ *     ]
+ * }
+ */

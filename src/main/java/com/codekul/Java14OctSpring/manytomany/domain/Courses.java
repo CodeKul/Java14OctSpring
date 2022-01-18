@@ -1,6 +1,7 @@
-package com.codekul.Java14OctSpring.manytomany;
+package com.codekul.Java14OctSpring.manytomany.domain;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "courses")
