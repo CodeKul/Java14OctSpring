@@ -15,6 +15,9 @@ public class StudentController {
 
     @PostMapping("saveStudent")
     public String saveStudent(@RequestBody Student student){
+
+
+
         studentRepository.save(student);
         return "Student saved..";
     }

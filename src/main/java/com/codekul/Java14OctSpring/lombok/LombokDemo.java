@@ -1,5 +1,6 @@
 package com.codekul.Java14OctSpring.lombok;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,8 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-@Getter
 @Setter
+@Getter
 public class LombokDemo {
 
     @Id
@@ -20,4 +21,6 @@ public class LombokDemo {
     private String name;
 
     private String address;
+
+
 }
