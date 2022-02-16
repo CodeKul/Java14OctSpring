@@ -25,7 +25,7 @@ public class RegistrationController {
     }
 
     @PostMapping("login")
-    public String login( @RequestBody LoginDto loginDto) {
+    public String login(@RequestBody LoginDto loginDto) {
 
         Registration registration
                 = registrationRepo.findByUserNameAndPassword(loginDto.getUserName(), loginDto.getPassword());
