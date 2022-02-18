@@ -1,5 +1,8 @@
 package com.codekul.Java14OctSpring;
 
+import com.codekul.Java14OctSpring.aop.BoyStudent;
+import com.codekul.Java14OctSpring.aop.GirlStudent;
+import com.codekul.Java14OctSpring.aop.Human;
 import com.codekul.Java14OctSpring.di.Company;
 import com.codekul.Java14OctSpring.ioc.Jio;
 import com.codekul.Java14OctSpring.ioc.Sim;
@@ -40,7 +43,20 @@ public class Java14OctSpringApplication {
 //		Sim sim = context.getBean(Jio.class);
 //		sim.calling();
 //		sim.data();
+
+//		Human human = applicationContext.getBean(Human.class);
+//		human.wakeUp();
+
+		BoyStudent boyStudent = applicationContext.getBean(BoyStudent.class);
+		boyStudent.study();
+
+		GirlStudent girlStudent = applicationContext.getBean(GirlStudent.class);
+		girlStudent.studyChemistry();
+
+
 	}
+
+
 
 	@GetMapping("hiiSpring")
 	public String getMsg(){
