@@ -3,11 +3,14 @@ package com.codekul.Java14OctSpring;
 import com.codekul.Java14OctSpring.aop.BoyStudent;
 import com.codekul.Java14OctSpring.aop.GirlStudent;
 import com.codekul.Java14OctSpring.aop.Human;
+import com.codekul.Java14OctSpring.aop.MyException;
 import com.codekul.Java14OctSpring.di.Company;
 import com.codekul.Java14OctSpring.ioc.Jio;
 import com.codekul.Java14OctSpring.ioc.Sim;
 import com.codekul.Java14OctSpring.ioc.SimConfig;
 import com.codekul.Java14OctSpring.ioc.Vodafone;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -24,7 +27,10 @@ import java.net.UnknownHostException;
 @RestController
 public class Java14OctSpringApplication {
 
-	public static void main(String[] args) throws SocketException, UnknownHostException {
+
+	private final static Logger logger = LoggerFactory.getLogger(Java14OctSpringApplication.class);
+
+	public static void main(String[] args) throws SocketException, UnknownHostException, MyException {
 		InetAddress addr = InetAddress.getLocalHost();
 
 		ConfigurableApplicationContext applicationContext = SpringApplication.run(Java14OctSpringApplication.class, args);
@@ -48,10 +54,21 @@ public class Java14OctSpringApplication {
 //		human.wakeUp();
 
 		BoyStudent boyStudent = applicationContext.getBean(BoyStudent.class);
-		boyStudent.study();
+		//jointPoint
+//		int i = boyStudent.study(1);
+//		System.out.println(i);
+		//jointPoint
+//		boyStudent.exce();
 
-		GirlStudent girlStudent = applicationContext.getBean(GirlStudent.class);
-		girlStudent.studyChemistry();
+		logger.debug("debug");
+		logger.info("info");
+		logger.error("Error");
+		logger.warn("warning");
+
+//		GirlStudent girlStudent = applicationContext.getBean(GirlStudent.class);
+//		girlStudent.studyChemistry();
+
+
 
 
 	}
