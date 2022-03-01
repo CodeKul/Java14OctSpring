@@ -1,7 +1,5 @@
 Enquiry form
 
-    private String id;
-
     private String fullName;
 
     private Long mobileNumber;
@@ -10,17 +8,17 @@ Enquiry form
 
     private String email;
 
-    private String enquirySource;
+    private String enquirySource; // drop down friends, relative,whatsapp,facebook,instagram
 
     private Date birthDate;
 
     private String comment;
 
-    private String mode;
+    private String mode; //online, offline
 
-    private String demo;
+    private boolean demo; //yes no
 
-    private String technology;
+    private String technology;//drop down java.spring,react,html,css
 
     private String qualification;
 
@@ -36,17 +34,13 @@ Enquiry form
 
     private String enquiryDate1;
 
-    private String status;
+    private String status; //drop down interested,not interested, looking for other courses
 
     private LocalDate followUpDate;
 
     private LocalDate nextFollowDate;
 
-    private String tFollowUpDate;
-
-    private String tNextFollowDate;
-
-    private User createdBy;
+    private User createdBy; // admin, counsellor, marketing
 
     private LocalDate createdDate;
 
