@@ -1,0 +1,403 @@
+vaibhav@vaibhav-HP-250-G8-Notebook-PC:~$ sudo mysql
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 26
+Server version: 8.0.19-0ubuntu5 (Ubuntu)
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> CREATE USER 'sammy'@'localhost' IDENTIFIED BY 'password';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql>
+mysql> create database java14oct;
+Query OK, 1 row affected (0.01 sec)
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| java14oct          |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> exit
+Bye
+vaibhav@vaibhav-HP-250-G8-Notebook-PC:~$ mysql -u sammy -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 27
+Server version: 8.0.19-0ubuntu5 (Ubuntu)
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> exit
+Bye
+vaibhav@vaibhav-HP-250-G8-Notebook-PC:~$ sudo mysql
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 28
+Server version: 8.0.19-0ubuntu5 (Ubuntu)
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'sammy'@'localhost' WITH GRANT OPTION;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql>
+mysql> exit
+Bye
+vaibhav@vaibhav-HP-250-G8-Notebook-PC:~$ mysql -u sammy -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 29
+Server version: 8.0.19-0ubuntu5 (Ubuntu)
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| java14oct          |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> exit
+Bye
+vaibhav@vaibhav-HP-250-G8-Notebook-PC:~$ sudo mysql
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 30
+Server version: 8.0.19-0ubuntu5 (Ubuntu)
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+mysql> FLUSH PRIVILEGES;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> exit
+Bye
+vaibhav@vaibhav-HP-250-G8-Notebook-PC:~$ mysql -u sammy -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 31
+Server version: 8.0.19-0ubuntu5 (Ubuntu)
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| java14oct          |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> exit
+Bye
+vaibhav@vaibhav-HP-250-G8-Notebook-PC:~$ sudo mysql
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 32
+Server version: 8.0.19-0ubuntu5 (Ubuntu)
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> REVOKE ALL PRIVILEGES ON *.* FROM 'sammy'@'localhost';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> exit
+Bye
+vaibhav@vaibhav-HP-250-G8-Notebook-PC:~$ mysql -u sammy -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 33
+Server version: 8.0.19-0ubuntu5 (Ubuntu)
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> exit
+Bye
+vaibhav@vaibhav-HP-250-G8-Notebook-PC:~$ sudo mysql
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 34
+Server version: 8.0.19-0ubuntu5 (Ubuntu)
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'sammy'@'localhost' WITH GRANT OPTION;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> exit
+Bye
+vaibhav@vaibhav-HP-250-G8-Notebook-PC:~$ mysql -u sammy -p
+Enter password:
+ERROR 1045 (28000): Access denied for user 'sammy'@'localhost' (using password: YES)
+vaibhav@vaibhav-HP-250-G8-Notebook-PC:~$ mysql -u sammy -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 36
+Server version: 8.0.19-0ubuntu5 (Ubuntu)
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| java14oct          |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.01 sec)
+
+mysql> use java14oct;
+Database changed
+
+mysql> show tables;
+Empty set (0.01 sec)
+
+mysql> create table departmet(id int primary key,name varchar(50),code varchar(50));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> alter table departmet rename to department;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> show tables;
++---------------------+
+| Tables_in_java14oct |
++---------------------+
+| department          |
++---------------------+
+1 row in set (0.01 sec)
+
+mysql> create table teacher(id int primary key, t_name varchar(50),t_address varchar(500),contact int,department_id int, foreign key(department_id) references department(id));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> desc department;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int         | NO   | PRI | NULL    |       |
+| name  | varchar(50) | YES  |     | NULL    |       |
+| code  | varchar(50) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.01 sec)
+
+mysql> desc teacher;
++---------------+--------------+------+-----+---------+-------+
+| Field         | Type         | Null | Key | Default | Extra |
++---------------+--------------+------+-----+---------+-------+
+| id            | int          | NO   | PRI | NULL    |       |
+| t_name        | varchar(50)  | YES  |     | NULL    |       |
+| t_address     | varchar(500) | YES  |     | NULL    |       |
+| contact       | int          | YES  |     | NULL    |       |
+| department_id | int          | YES  | MUL | NULL    |       |
++---------------+--------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> insert into department(id,name,code) values(1,'physics','P900');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into department(id,name,code) values(1,'chemistry','C700');
+ERROR 1062 (23000): Duplicate entry '1' for key 'department.PRIMARY'
+mysql> insert into department(id,name,code) values(2,'chemistry','C700');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into department(id,name,code) values(3,'CS','CS600');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from department;
++----+-----------+-------+
+| id | name      | code  |
++----+-----------+-------+
+|  1 | physics   | P900  |
+|  2 | chemistry | C700  |
+|  3 | CS        | CS600 |
++----+-----------+-------+
+3 rows in set (0.00 sec)
+
+mysql> select id,name from department;
++----+-----------+
+| id | name      |
++----+-----------+
+|  1 | physics   |
+|  2 | chemistry |
+|  3 | CS        |
++----+-----------+
+3 rows in set (0.00 sec)
+
+mysql> select id,name from department where id =1;
++----+---------+
+| id | name    |
++----+---------+
+|  1 | physics |
++----+---------+
+1 row in set (0.00 sec)
+
+mysql> select id,name from department where id =1 and name = 'Physics';
++----+---------+
+| id | name    |
++----+---------+
+|  1 | physics |
++----+---------+
+1 row in set (0.00 sec)
+
+mysql> select id,name from department where id =1 and name = 'Physic';
+Empty set (0.00 sec)
+
+mysql> select id,name from department where id =1 or name = 'Physic';
++----+---------+
+| id | name    |
++----+---------+
+|  1 | physics |
++----+---------+
+1 row in set (0.00 sec)
+
+mysql> desc teacher;
++---------------+--------------+------+-----+---------+-------+
+| Field         | Type         | Null | Key | Default | Extra |
++---------------+--------------+------+-----+---------+-------+
+| id            | int          | NO   | PRI | NULL    |       |
+| t_name        | varchar(50)  | YES  |     | NULL    |       |
+| t_address     | varchar(500) | YES  |     | NULL    |       |
+| contact       | int          | YES  |     | NULL    |       |
+| department_id | int          | YES  | MUL | NULL    |       |
++---------------+--------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> insert into teacher(id,t_name,t_address,contact,department_id) values(1,'Rajesh','pune',123322,1);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into teacher(id,t_name,t_address,contact,department_id) values(2,'Mahesh','Nashik',4322,2);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from teacher;
++----+--------+-----------+---------+---------------+
+| id | t_name | t_address | contact | department_id |
++----+--------+-----------+---------+---------------+
+|  1 | Rajesh | pune      |  123322 |             1 |
+|  2 | Mahesh | Nashik    |    4322 |             2 |
++----+--------+-----------+---------+---------------+
+2 rows in set (0.00 sec)
+
+mysql> update teacher set t_name = 'Raj' where id = 1;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from teacher;
++----+--------+-----------+---------+---------------+
+| id | t_name | t_address | contact | department_id |
++----+--------+-----------+---------+---------------+
+|  1 | Raj    | pune      |  123322 |             1 |
+|  2 | Mahesh | Nashik    |    4322 |             2 |
++----+--------+-----------+---------+---------------+
+2 rows in set (0.00 sec)
+
+mysql> update teacher set t_name = 'Rajesh';
+Query OK, 2 rows affected (0.01 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> select * from teacher;
++----+--------+-----------+---------+---------------+
+| id | t_name | t_address | contact | department_id |
++----+--------+-----------+---------+---------------+
+|  1 | Rajesh | pune      |  123322 |             1 |
+|  2 | Rajesh | Nashik    |    4322 |             2 |
++----+--------+-----------+---------+---------------+
+2 rows in set (0.00 sec)
+
+mysql> update teacher set t_name = 'Raj' where id = 1;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update teacher set t_name = 'Mahesh' where id = 2;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+
